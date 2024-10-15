@@ -68,7 +68,7 @@ in
       dontFixup = true;
 
       installPhase = ''
-        python3 ${./write-nixpkgs-prebuilt.py} --store ${builtins.storeDir} ${from} "$out"
+        python3 ${./write-nixpkgs-prebuilt.py} --store ${builtins.storeDir} ${from.outPath} "$out"
       '';
     };
 }
